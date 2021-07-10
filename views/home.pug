@@ -1,0 +1,43 @@
+doctype html
+html 
+  head
+    
+    link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css')
+    style
+      include ../static/style.css
+    title Document
+  body
+    .box
+      
+      section.search-container
+        input#search-box(type='text', name='City', placeholder='Enetr City Name...')
+        button#search-icon(type='submit', onclick='search()')
+          i.bi.bi-search
+      
+      section.Area
+        div#city
+        div#sun
+          img#rise-icon
+          | &nbsp;
+          span#sun-rise
+          | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          img#set-icon
+          | &nbsp;
+          span#sun-set
+        div#temp
+      
+      section.weather
+        img#icon
+        span#condition Get the Weather Details of Your Location....
+      
+      section.details
+        div#feels-like
+        div#max-min-temp
+        div#wind
+          img#w-icon
+          span#w-speed
+        div#pressure
+        div#humidity
+    
+    script 
+      include ../static/script.js
